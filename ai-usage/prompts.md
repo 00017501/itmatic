@@ -1,6 +1,6 @@
 # Coursework 2: AI Usage Record
 
-<!-- transcripts-read-up-to: 2026-11-26T11:09:32.872Z -->
+<!-- transcripts-read-up-to: 2026-11-26T14:45:28.880Z -->
 
 **Module:** Systems Analysis and Design (6BUIS026C)
 **Case:** ITmatic, an education centre in Tashkent that needs a student-management system
@@ -298,6 +298,25 @@ The full prompt is in **Appendix D**.
 > Add the browser version of the parent and student screens to the low-fidelity prototype too, and keep both the mobile and the browser versions in sync.
 >
 > For the upcoming lessons, add a calendar view that makes it easy to see which days have lessons, with the hours highlighted and the lesson name and room shown.
+
+
+### 7.5 Check the low-fi against the hi-fi in the browser
+`[Claude Code]`
+
+*Purpose: find where the simpler low-fi had drifted from the hi-fi after the later changes. Produced: the low-fi frames brought back in step with the app, and the remaining differences recorded as deliberate simplifications (decision 56).*
+
+> Have you checked the low-fi in Figma with Claude in Chrome? I can see some inconsistencies: for example, we later changed the buttons at the bottom of the sidebar. I know the low-fi is simpler, but check it in the browser and see whether anything significant is missing or misaligned.
+
+---
+
+## Stage 8: Deployment
+
+### 8.1 Publish the app and build the zip
+`[Claude Code]` (merged from three messages)
+
+*Purpose: put the hi-fi online and package the submission. Produced: a GitHub Actions workflow that publishes the app on GitHub Pages, the Pages source set through Claude in Chrome, the public links in the README and the handoff folder, and the submission zip (decision 58).*
+
+> I have made the repository public. Add its link to the README and the other documents. Instead of signing in to another GitHub account, publish the app on GitHub Pages using Claude in Chrome. Once everything has a link, build the submission zip.
 
 ---
 
