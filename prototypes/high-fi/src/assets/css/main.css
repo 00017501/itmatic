@@ -1,0 +1,106 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+/* Calm operations (DESIGN.md). One brand hue; status colours only for status. */
+@theme static {
+  /* Page title and key figures: 28 px (DESIGN.md, page-title). */
+  --text-title: 1.75rem;
+  --text-title--line-height: 1.2;
+  --font-sans: 'Onest', system-ui, sans-serif;
+
+  --color-inkteal-50: #eef5f5;
+  --color-inkteal-100: #e6f0f0;
+  --color-inkteal-200: #c5ddde;
+  --color-inkteal-300: #9fc2c4;
+  --color-inkteal-400: #5f969a;
+  --color-inkteal-500: #0f5e63;
+  --color-inkteal-600: #0b4a4e;
+  --color-inkteal-700: #093d40;
+  --color-inkteal-800: #072f32;
+  --color-inkteal-900: #052326;
+  --color-inkteal-950: #031618;
+
+  --color-paper: #ffffff;
+  --color-mist: #f5f7f8;
+  --color-ink: #14202a;
+  --color-ink-muted: #52606b;
+  --color-line: #d5dce1;
+  --color-line-strong: #7a8792;
+  --color-paid: #1f7a4d;
+  --color-debt: #b3261e;
+  --color-pending: #8a5300;
+  --color-chart-teal-light: #5f969a;
+  --color-chart-teal-mid: #357a7f;
+}
+
+:root {
+  --ui-radius: 0.375rem;
+  --ui-text: #14202a;
+  --ui-text-highlighted: #14202a;
+  --ui-text-toned: #52606b;
+  --ui-text-muted: #52606b;
+  --ui-text-dimmed: #52606b;
+  --ui-bg-muted: #f5f7f8;
+  --ui-bg-elevated: #f5f7f8;
+  --ui-border: #d5dce1;
+  --ui-border-muted: #d5dce1;
+  --ui-border-accented: #7a8792;
+  --ui-success: #1f7a4d;
+  --ui-error: #b3261e;
+  --ui-warning: #8a5300;
+}
+
+body {
+  background: var(--color-mist);
+  color: var(--color-ink);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Unovis charts take the Calm operations tokens (DESIGN.md, Charts). */
+.chart {
+  --vis-font-family: var(--font-sans);
+  --vis-axis-tick-label-color: var(--color-ink-muted);
+  --vis-axis-tick-label-font-size: 12px;
+  --vis-axis-tick-label-weight: 400;
+  --vis-axis-grid-color: var(--color-line);
+  --vis-axis-tick-color: var(--color-line);
+  --vis-axis-domain-color: var(--color-line-strong);
+  --vis-crosshair-line-stroke-color: var(--color-line-strong);
+  --vis-tooltip-background-color: var(--color-ink);
+  --vis-tooltip-text-color: var(--color-paper);
+  --vis-tooltip-border-color: var(--color-ink);
+  --vis-tooltip-padding: 6px 10px;
+  --vis-tooltip-border-radius: 6px;
+  --vis-xy-label-font-size: 13px;
+}
+
+/* Touch targets: at least 44 px on phone and tablet widths (ui-design.md, WCAG 2.2 target size). */
+@media (max-width: 1023px) {
+  button:not([role='switch'], [role='checkbox'], [role='radio']),
+  a[data-slot='base'],
+  [role='tab'],
+  input:not([type='checkbox'], [type='radio']),
+  select,
+  textarea {
+    min-height: 2.75rem;
+  }
+
+  button:not([role='switch'], [role='checkbox'], [role='radio']) {
+    min-width: 2.75rem;
+  }
+}
+
+/* Buttons: 40 px on a computer, 48 px on a phone (DESIGN.md, Buttons). */
+:where(button:not([role]), a)[data-slot='base'] {
+  min-height: 2.5rem;
+  min-width: 2.5rem;
+}
+
+@media (max-width: 1023px) {
+  :where(button:not([role]), a)[data-slot='base'] {
+    min-height: 3rem;
+  }
+}
