@@ -37,7 +37,11 @@ def typed_text(entry):
     # A message typed while the agent was working is saved as a queued_command attachment.
     att = entry.get("attachment") if entry.get("type") == "attachment" else None
     if isinstance(att, dict) and att.get("type") == "queued_command" and att.get("commandMode") == "prompt":
-        return (att.get("prompt") or "").strip() or None
+        text = (att.get("prompt") or "").strip()
+        # Subagent reports and task notifications arrive the same way; they are not the user's words.
+        if not text or (text.startswith("<") and not text.startswith("<pasted_content")):
+            return None
+        return text
     if entry.get("type") != "user" or entry.get("isMeta") or entry.get("isSidechain"):
         return None
     content = entry.get("message", {}).get("content")

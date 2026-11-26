@@ -13,10 +13,11 @@ Prototypes for Coursework 2 of Systems Analysis and Design (6BUIS026C). The case
 
 | What | Link |
 | --- | --- |
-| Live application | not published yet |
+| Live application (high-fidelity prototype) | https://00017501.github.io/itmatic/ |
 | Low-fidelity prototype (Figma) | https://www.figma.com/proto/aMZGoAy6fupTCqgm9lkhSw/ITmatic-CW2-low-fi-prototype?node-id=6-7&starting-point-node-id=6%3A7 |
 | Low-fidelity design file (Figma) | https://www.figma.com/design/aMZGoAy6fupTCqgm9lkhSw |
-| Repository | not published yet |
+| Repository | https://github.com/00017501/itmatic |
+| Screencast (video, under one minute) | https://drive.google.com/file/d/1l-sABD1vIjbzYSSj5HhVJuCkQU5rG7WU/view?usp=sharing |
 
 ## What the prototypes show
 
